@@ -29,12 +29,12 @@ export const HEADER_LINKS: HeaderLink[] = [
     href: "/tags",
   },
   {
-    name: "CV",
+    name: "resume",
     text: "CV",
     href: "/resume",
   },
   {
-    name: "A propos",
+    name: "a-propos",
     text: "A propos",
     href: "/a-propos",
   },
