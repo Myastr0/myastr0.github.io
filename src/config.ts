@@ -35,7 +35,7 @@ export const HEADER_LINKS: HeaderLink[] = [
   },
   {
     name: "a-propos",
-    text: "A propos",
+    text: "A propos",
     href: "/a-propos",
   },
 ];
