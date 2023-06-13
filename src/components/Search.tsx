@@ -12,6 +12,7 @@ export type SearchItem = {
 
 interface Props {
   searchList: SearchItem[];
+  searchPlaceholder: string;
 }
 
 interface SearchResult {
@@ -19,7 +20,7 @@ interface SearchResult {
   refIndex: number;
 }
 
-export default function SearchBar({ searchList }: Props) {
+export default function SearchBar({ searchList, searchPlaceholder }: Props) {
   const inputRef = useRef<HTMLInputElement>(null);
   const [inputVal, setInputVal] = useState("");
   const [searchResults, setSearchResults] = useState<SearchResult[] | null>(
@@ -86,7 +87,7 @@ export default function SearchBar({ searchList }: Props) {
         border-opacity-40 bg-skin-fill py-3 pl-10
         pr-3 placeholder:italic placeholder:text-opacity-75
         focus:border-skin-accent focus:outline-none"
-          placeholder="Rechercher ..."
+          placeholder={searchPlaceholder}
           type="text"
           name="search"
           value={inputVal}

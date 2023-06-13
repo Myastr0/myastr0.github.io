@@ -5,38 +5,30 @@ export const SITE: Site = {
   author: "Leo DUMON",
   desc: "Mon blog perso",
   title: "Léo Dumon",
-  ogImage: "astropaper-og.jpg",
+  ogImage: "ldmn-og.jpg",
   lightAndDarkMode: true,
   postPerPage: 3,
 };
 
-export const BIOGRAPHY: string[] = [
-  "Développeur backend et DevOps, depuis plus de 6 ans, je suis passionné par tout ce qui touche à l'automatisation et la developer experience (DX).",
-  "Je suis actuellement en poste chez Shine, en tant que Platform Engineer.",
-];
+export enum SUPPORTED_LOCALES {
+  en = "en",
+  fr = "fr",
+}
 
-export const LOCALE = ["fr-FR"]; // set to [] to use the environment default
+export const DATETIME_LOCALE = ["fr-FR"]; // set to [] to use the environment default
 
 export const HEADER_LINKS: HeaderLink[] = [
   {
-    name: "Posts",
-    text: "Posts",
+    i18nKey: "nav.posts",
     href: "/posts",
   },
   {
-    name: "Tags",
-    text: "Tags",
+    i18nKey: "nav.tags",
     href: "/tags",
   },
   {
-    name: "resume",
-    text: "CV",
+    i18nKey: "nav.resume",
     href: "/resume",
-  },
-  {
-    name: "a-propos",
-    text: "A propos",
-    href: "/a-propos",
   },
 ];
 export const LOGO_IMAGE = {
@@ -185,3 +177,5 @@ export const SOCIALS: SocialObjects = [
     active: false,
   },
 ];
+
+export const DEFAULT_LOCALE = SUPPORTED_LOCALES.fr;

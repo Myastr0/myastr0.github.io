@@ -9,6 +9,8 @@ import getUniqueTags from "@utils/getUniqueTags";
 import getPostsByTag from "@utils/getPostsByTag";
 import slugify from "@utils/slugify";
 import { SITE } from "@config";
+import { getLangFromUrl, useTranslations } from "../../../i18n/utils";
+import getPostsByLocale from "../../../utils/getPostsByLocale";
 
 export interface Props {
   post: CollectionEntry<"blog">;
@@ -31,20 +33,24 @@ export async function getStaticPaths() {
 const { tag } = Astro.props;
 
 const posts = await getCollection("blog", ({ data }) => !data.draft);
+const lang = getLangFromUrl(Astro.url);
 
-const tagPosts = getPostsByTag(posts, tag);
+const localizedPosts = getPostsByLocale(posts, lang);
+
+const tagPosts = getPostsByTag(localizedPosts, tag);
+const t = useTranslations(lang);
 ---
 
 <Layout title={`Tag:${tag} | ${SITE.title}`}>
   <Header activeNav="tags" />
   <Main
     pageTitle={`Tag:${tag}`}
-    pageDesc={`All the articles with the tag "${tag}".`}
+    pageDesc={`${t("tags:tag.pageDesc")} "${tag}".`}
   >
     <ul>
       {
         tagPosts.map(({ data }) => (
-          <Card href={`/posts/${slugify(data)}`} frontmatter={data} />
+          <Card href={`/${lang}/posts/${slugify(data)}`} frontmatter={data} />
         ))
       }
     </ul>

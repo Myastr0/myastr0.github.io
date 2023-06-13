@@ -6,6 +6,7 @@ import Tag from "@components/Tag.astro";
 import Datetime from "@components/Datetime";
 import type { CollectionEntry } from "astro:content";
 import { slugifyStr } from "@utils/slugify";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
 
 export interface Props {
   post: CollectionEntry<"blog">;
@@ -19,6 +20,10 @@ const { Content } = await post.render();
 
 const ogUrl = new URL(ogImage ? ogImage : `${title}.png`, Astro.url.origin)
   .href;
+
+const lang = getLangFromUrl(Astro.url);
+
+const t = useTranslations(lang);
 ---
 
 <Layout title={title} author={author} description={description} ogImage={ogUrl}>
@@ -32,7 +37,7 @@ const ogUrl = new URL(ogImage ? ogImage : `${title}.png`, Astro.url.origin)
         ><path
           d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"
         ></path>
-      </svg><span>Retour</span>
+      </svg><span>{t("nav.back")}</span>
     </button>
   </div>
   <main id="main-content">
@@ -43,7 +48,7 @@ const ogUrl = new URL(ogImage ? ogImage : `${title}.png`, Astro.url.origin)
     </article>
 
     <ul class="tags-container">
-      {tags.map(tag => <Tag name={slugifyStr(tag)} />)}
+      {tags.map(tag => <Tag locale={lang} name={slugifyStr(tag)} />)}
     </ul>
   </main>
   <Footer />

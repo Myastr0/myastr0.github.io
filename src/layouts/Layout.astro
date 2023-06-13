@@ -1,8 +1,12 @@
 ---
-import { SITE } from "@config";
+import { SITE, DEFAULT_LOCALE } from "@config";
 import "@styles/base.css";
 
 const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
+
+// import { getLangFromUrl } from "../i18n/utils";
+
+let lang = DEFAULT_LOCALE;
 
 export interface Props {
   title?: string;
@@ -27,7 +31,7 @@ const socialImageURL = new URL(
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -40,7 +44,7 @@ const socialImageURL = new URL(
     <meta name="title" content={title} />
     <meta name="description" content={description} />
     <meta name="author" content={author} />
-    <link rel="sitemap" href="/sitemap-index.xml"/>
+    <link rel="sitemap" href="/sitemap-index.xml" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:title" content={title} />
