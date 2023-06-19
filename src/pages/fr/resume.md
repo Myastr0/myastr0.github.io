@@ -1,17 +1,19 @@
 ---
-layout: ../layouts/ResumeLayout.astro
+layout: ../../layouts/ResumeLayout.astro
 title: "CV"
 ---
+
 ## Platform Engineer
+
 [**Shine**](https://www.linkedin.com/company/shine-tools) · CDI 📍 Paris, Ile-de-France, France _(Actuellement)_
 
 Colonne vertébrale du service technique, j'interviens sur 3 grands volets :
 
- - Le premier, le volet "**Infrastructure**" avec comme objectif la responsabilité de la partie infrastructure, stabilité et évolutivité. Mise en place de Terraform, Migration de AppEngine vers CloudRun.
+- Le premier, le volet "**Infrastructure**" avec comme objectif la responsabilité de la partie infrastructure, stabilité et évolutivité. Mise en place de Terraform, Migration de AppEngine vers CloudRun.
 
- - Le second, le volet "**Core services**" avec comme objectif de répondre fonctionnellement aux attentes des équipes tech orientées produit. Conception d'un système de permissions scalable, Conception d'un système d'authentification.
+- Le second, le volet "**Core services**" avec comme objectif de répondre fonctionnellement aux attentes des équipes tech orientées produit. Conception d'un système de permissions scalable, Conception d'un système d'authentification.
 
- - Le troisième, le volet "**Developer Experience**" avec comme objectif de concevoir et maintenir des outils afin de faciliter la vie des développeurs et développeuses chez Shine. Conception de CLI pour réduire la charge cognitive, conception de codegen (TS -> JS).
+- Le troisième, le volet "**Developer Experience**" avec comme objectif de concevoir et maintenir des outils afin de faciliter la vie des développeurs et développeuses chez Shine. Conception de CLI pour réduire la charge cognitive, conception de codegen (TS -> JS).
 
 <sub>Compétences : Terraform · NodeJS · Google Cloud Platform (GCP) · CloudRun · AppEngine · Authorization · TypeScript · Event driven</sub>
 
@@ -24,7 +26,9 @@ _nov. 2019 - nov. 2022 · 3 ans 1 mois_
 Mise en place d’une CI/CD sur Gitlab via des hosted runners sous EKS (AWS) afin d’automatiser les tests, le linting, les vulnerability checks et le déploiement sur le cloud. Dockerisation de toute l’infrastructure et mise en place d’un cluster RabbitMQ pour orienter l’architecture vers de l’Event Driven Design. Création d’un outil interne afin de permettre au développeur de lancer les microservices nécessaire à leur travail en mode “A la carte” (basé sur Docker Compose v2). Mise en place d’outil d’alerting, analyse et de BI tel que Sentry, ElasticSearch et Metabase le tout hosté sur notre private cloud.
 
 <sub>Compétences : GitLab · Sentry · Metabase · Amazon Web Services · Intégration continue et livraison continue (CI/CD) · Event driven · Docker · Elasticsearch · RabbitMQ</sub>
+
 ## Lead Backend Developer
+
 [**Bleexo**](https://www.linkedin.com/company/bleexo/) · CDI 📍 Toulouse, Occitanie, France
 
 _nov. 2019 - nov. 2022 · 3 ans 1 mois_
@@ -33,8 +37,8 @@ Co-conception et développement d’une plateforme SaaS suivant un cycle SCRUM r
 
 <sub>Compétences : TypeScript · PostgreSQL · Jest · Mocha · Cypress.io · Redis · Test Driven Development · Programmation pilotée par le comportement · BDD · Node.js · MongoDB</sub>
 
-
 ## DataOps
+
 [**Continental**](https://www.linkedin.com/company/continental/) 📍 Toulouse, Occitanie, France
 
 _avr. 2019 - nov. 2019 · 8 mois_

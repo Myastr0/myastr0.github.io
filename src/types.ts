@@ -1,3 +1,6 @@
+import type { SUPPORTED_LOCALES } from "@config";
+import { defaultLang, ui } from "./i18n/ui";
+
 export type Site = {
   website: string;
   author: string;
@@ -21,8 +24,7 @@ export type SocialIcons = {
 };
 
 export type HeaderLink = {
-  name: string;
-  text: string;
+  i18nKey: keyof (typeof ui)[typeof defaultLang];
   href: string;
 };
 
@@ -47,3 +49,8 @@ export type SocialMedia =
   | "Steam"
   | "Telegram"
   | "Mastodon";
+
+export interface Language {
+  code: SUPPORTED_LOCALES;
+  label: string;
+}

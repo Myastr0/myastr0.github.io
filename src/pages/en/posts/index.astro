@@ -3,12 +3,17 @@ import { SITE } from "@config";
 import Posts from "@layouts/Posts.astro";
 import getSortedPosts from "@utils/getSortedPosts";
 import getPageNumbers from "@utils/getPageNumbers";
+import getPostsByLocale from "@utils/getPostsByLocale";
 
 import { getCollection } from "astro:content";
+import { getLangFromUrl } from "../../../i18n/utils";
 
 const posts = await getCollection("blog");
 
-const sortedPosts = getSortedPosts(posts);
+const lang = getLangFromUrl(Astro.url);
+const localizedPosts = getPostsByLocale(posts, lang);
+
+const sortedPosts = getSortedPosts(localizedPosts);
 
 const totalPages = getPageNumbers(sortedPosts.length);
 
