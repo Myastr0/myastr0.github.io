@@ -1,12 +1,14 @@
 ---
-author: Sat Naing
-pubDatetime: 2022-09-23T15:22:00Z
+author: Leo DUMON
+pubDatetime: 2023-06-21T00:00:00+00:00
 title: Atomic Design in CI/CD
 postSlug: atomic-design-in-ci-cd
 featured: true
 draft: true
 tags:
-  - docs
+  - ci/cd
+  - atomic design
+  - gitlab
 ogImage: ""
 description: Découvrez comment l'Atomic Design peut vous aider à améliorer la maintenabilité de vos pipelines CI/CD.
 ---
