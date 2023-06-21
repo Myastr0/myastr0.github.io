@@ -2,8 +2,8 @@ import { SUPPORTED_LOCALES } from "@config";
 import type { Language } from "../types";
 import getPostsByLocale from "@utils/getPostsByLocale";
 export const languages: Language[] = [
-  { code: SUPPORTED_LOCALES.en, label: "English" },
   { code: SUPPORTED_LOCALES.fr, label: "Français" },
+  { code: SUPPORTED_LOCALES.en, label: "English" },
 ];
 
 export const defaultLang: SUPPORTED_LOCALES = SUPPORTED_LOCALES.en;
