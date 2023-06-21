@@ -1,16 +1,14 @@
 ---
 author: Sat Naing
 pubDatetime: 2022-09-23T15:22:00Z
-title: Adding new posts in AstroPaper theme
-postSlug: adding-new-posts-in-astropaper-theme
+title: Atomic Design in CI/CD
+postSlug: atomic-design-in-ci-cd
 featured: true
-draft: false
+draft: true
 tags:
   - docs
 ogImage: ""
-description:
-  Some rules & recommendations for creating or adding new posts using AstroPaper
-  theme.
+description: Découvrez comment l'Atomic Design peut vous aider à améliorer la maintenabilité de vos pipelines CI/CD.
 ---
 
 Le talk se découpera en trois parties distinctes pour faire comprendre l'intêret de de l'Atomic Design.
